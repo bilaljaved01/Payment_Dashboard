@@ -11,7 +11,6 @@ It lets you log in securely, track payments, add new transactions, and see reven
 - 🔐 Login with JWT (stored securely using expo-secure-store)
 - 📊 Dashboard with key stats (today’s payments, weekly revenue, failed counts)
 - 🧾 Transaction list with filters (status, method, date)
-- ➕ Add new payment form
 - 📈 Revenue chart (last 7 days)
 
 ---
@@ -54,20 +53,7 @@ These are hardcoded in the backend (can be replaced with a real DB later).
 
 ## 🛠️ How to Run It Locally
 
-### 1. Backend (NestJS + MongoDB)
-
-```bash
-cd server
-npm install
-npm run start:dev
-````
-
-Make sure your MongoDB URI is set correctly in `app.module.ts`.
-The API will run at: `http://<your-ip>:3000`
-
----
-
-### 2. Frontend (React Native via Expo)
+### 1. Frontend (React Native via Expo)
 
 ```bash
 cd client
@@ -76,18 +62,17 @@ npx expo start --no-web
 ```
 
 * Use **Expo Go** on your phone and scan the QR code.
-* Make sure your phone and PC are on the **same Wi-Fi**.
-* Replace `baseURL` in `src/services/api.ts` with your local IP:
 
-```ts
-baseURL: 'http://192.168.0.106:3000'
-```
-
+* wait for 10-20 seconds for render to wake up server
 ---
 
 ## 🖼️ Screenshots
 
-*Add screenshots or a short video demo here*
+<h3>🔐 Login Screen</h3>
+<img src="client/screenshots/login.jpg" width="200" />
+
+<h3>📊 Dashboard</h3>
+<img src="client/screenshots/dashboard.jpg" width="200" />
 
 ---
 
